@@ -15,13 +15,13 @@
 #include <fossil/pizza/framework.h>
 
 // Define the test suite and add test cases
-FOSSIL_SUITE( cpp_test_driven_development_suite);
+FOSSIL_SUITE(cpp_test_driven_development_suite);
 
 // Setup function for the test suite
-FOSSIL_SETUP( cpp_test_driven_development_suite) {}
+FOSSIL_SETUP(cpp_test_driven_development_suite) {}
 
 // Teardown function for the test suite
-FOSSIL_TEARDOWN( cpp_test_driven_development_suite) {}
+FOSSIL_TEARDOWN(cpp_test_driven_development_suite) {}
 
 // * * * * * * * * * * * * * * * * * * * * * * * *
 // * Codelab Test Cases
@@ -29,7 +29,7 @@ FOSSIL_TEARDOWN( cpp_test_driven_development_suite) {}
 // Simple test case for 2 + 2
 // * * * * * * * * * * * * * * * * * * * * * * * *
 
-FOSSIL_TEST( cpp_test_driven_development_test_simple_math) {
+FOSSIL_TEST(cpp_test_driven_development_test_simple_math) {
     // Arrange
     int a = 2, b = 2;
 
@@ -40,7 +40,7 @@ FOSSIL_TEST( cpp_test_driven_development_test_simple_math) {
     ASSUME_ITS_EQUAL_I32(4, result);
 }
 
-FOSSIL_TEST( cpp_test_driven_development_test_unsigned_math) {
+FOSSIL_TEST(cpp_test_driven_development_test_unsigned_math) {
     // Arrange
     uint32_t actual = 10;
     uint32_t expected = 5;
@@ -53,7 +53,7 @@ FOSSIL_TEST( cpp_test_driven_development_test_unsigned_math) {
     ASSUME_NOT_MORE_OR_EQUAL_U32(expected, actual);
 }
 
-FOSSIL_TEST( cpp_test_driven_development_test_signed_math) {
+FOSSIL_TEST(cpp_test_driven_development_test_signed_math) {
     // Arrange
     int32_t actual = -10;
     int32_t expected = -5;
@@ -90,7 +90,7 @@ FOSSIL_TEST(cpp_test_driven_development_test_soap_tone_detection) {
     ASSUME_NOT_SOAP_TONE_DETECTED(incorrect_tone_text, "sarcastic");
 }
 
-FOSSIL_TEST( cpp_test_driven_development_test_cstr_equality) {
+FOSSIL_TEST(cpp_test_driven_development_test_cstr_equality) {
     // Arrange
     const char *actual = "hello";
     const char *expected = "hello";
@@ -101,7 +101,7 @@ FOSSIL_TEST( cpp_test_driven_development_test_cstr_equality) {
     ASSUME_NOT_EQUAL_CSTR(actual, not_expected);
 }
 
-FOSSIL_TEST( cpp_test_driven_development_test_cstr_length) {
+FOSSIL_TEST(cpp_test_driven_development_test_cstr_length) {
     // Arrange
     const char *text = "hello";
 
@@ -110,7 +110,7 @@ FOSSIL_TEST( cpp_test_driven_development_test_cstr_length) {
     ASSUME_NOT_LENGTH_EQUAL_CSTR(text, 10);
 }
 
-FOSSIL_TEST( cpp_test_driven_development_test_cstr_prefix_suffix) {
+FOSSIL_TEST(cpp_test_driven_development_test_cstr_prefix_suffix) {
     // Arrange
     const char *text = "hello world";
 
@@ -121,7 +121,7 @@ FOSSIL_TEST( cpp_test_driven_development_test_cstr_prefix_suffix) {
     ASSUME_NOT_CSTR_ENDS_WITH(text, "hello");
 }
 
-FOSSIL_TEST( cpp_test_driven_development_test_cstr_contains) {
+FOSSIL_TEST(cpp_test_driven_development_test_cstr_contains) {
     // Arrange
     const char *text = "hello world";
 
@@ -130,7 +130,7 @@ FOSSIL_TEST( cpp_test_driven_development_test_cstr_contains) {
     ASSUME_NOT_CSTR_CONTAINS(text, "pizza");
 }
 
-FOSSIL_TEST( cpp_test_driven_development_test_cstr_count) {
+FOSSIL_TEST(cpp_test_driven_development_test_cstr_count) {
     // Arrange
     const char *text = "hello hello world";
 
@@ -139,7 +139,7 @@ FOSSIL_TEST( cpp_test_driven_development_test_cstr_count) {
     ASSUME_NOT_CSTR_COUNT(text, "hello", 3);
 }
 
-FOSSIL_TEST( cpp_test_driven_development_test_pointer_nullability) {
+FOSSIL_TEST(cpp_test_driven_development_test_pointer_nullability) {
     // Arrange
     void *null_ptr = null;
     void *non_null_ptr = (void *)0x1;
@@ -153,7 +153,7 @@ FOSSIL_TEST( cpp_test_driven_development_test_pointer_nullability) {
     ASSUME_NOT_CNONNULL(null_ptr);
 }
 
-FOSSIL_TEST( cpp_test_driven_development_test_likely_unlikely_conditions) {
+FOSSIL_TEST(cpp_test_driven_development_test_likely_unlikely_conditions) {
     // Arrange
     int likely_condition = 1;
     int unlikely_condition = 0;
@@ -165,7 +165,7 @@ FOSSIL_TEST( cpp_test_driven_development_test_likely_unlikely_conditions) {
     ASSUME_NOT_UNLIKELY(unlikely_condition);
 }
 
-FOSSIL_TEST( cpp_test_driven_development_test_pointer_equality) {
+FOSSIL_TEST(cpp_test_driven_development_test_pointer_equality) {
     // Arrange
     void *ptr1 = (void *)0x1;
     void *ptr2 = (void *)0x1;
@@ -176,7 +176,7 @@ FOSSIL_TEST( cpp_test_driven_development_test_pointer_equality) {
     ASSUME_NOT_EQUAL_PTR(ptr1, ptr3);
 }
 
-FOSSIL_TEST( cpp_test_driven_development_test_size_comparisons) {
+FOSSIL_TEST(cpp_test_driven_development_test_size_comparisons) {
     // Arrange
     size_t size1 = 10;
     size_t size2 = 20;
@@ -193,21 +193,21 @@ FOSSIL_TEST( cpp_test_driven_development_test_size_comparisons) {
 // * Codelab Test Pool
 // * * * * * * * * * * * * * * * * * * * * * * * *
 
-FOSSIL_TEST_GROUP( cpp_test_driven_development_tests) {
-    FOSSIL_TEST_ADD( cpp_test_driven_development_suite,  cpp_test_driven_development_test_simple_math);
-    FOSSIL_TEST_ADD( cpp_test_driven_development_suite,  cpp_test_driven_development_test_unsigned_math);
-    FOSSIL_TEST_ADD( cpp_test_driven_development_suite,  cpp_test_driven_development_test_signed_math);
-    FOSSIL_TEST_ADD( cpp_test_driven_development_suite,  cpp_test_driven_development_test_soap_rot_brain);
-    FOSSIL_TEST_ADD( cpp_test_driven_development_suite,  cpp_test_driven_development_test_soap_tone_detection);
-    FOSSIL_TEST_ADD( cpp_test_driven_development_suite,  cpp_test_driven_development_test_cstr_equality);
-    FOSSIL_TEST_ADD( cpp_test_driven_development_suite,  cpp_test_driven_development_test_cstr_length);
-    FOSSIL_TEST_ADD( cpp_test_driven_development_suite,  cpp_test_driven_development_test_cstr_prefix_suffix);
-    FOSSIL_TEST_ADD( cpp_test_driven_development_suite,  cpp_test_driven_development_test_cstr_contains);
-    FOSSIL_TEST_ADD( cpp_test_driven_development_suite,  cpp_test_driven_development_test_cstr_count);
-    FOSSIL_TEST_ADD( cpp_test_driven_development_suite,  cpp_test_driven_development_test_pointer_nullability);
-    FOSSIL_TEST_ADD( cpp_test_driven_development_suite,  cpp_test_driven_development_test_likely_unlikely_conditions);
-    FOSSIL_TEST_ADD( cpp_test_driven_development_suite,  cpp_test_driven_development_test_pointer_equality);
-    FOSSIL_TEST_ADD( cpp_test_driven_development_suite,  cpp_test_driven_development_test_size_comparisons);
+FOSSIL_TEST_GROUP(cpp_test_driven_development_tests) {
+    FOSSIL_TEST_ADD(cpp_test_driven_development_suite, cpp_test_driven_development_test_simple_math);
+    FOSSIL_TEST_ADD(cpp_test_driven_development_suite, cpp_test_driven_development_test_unsigned_math);
+    FOSSIL_TEST_ADD(cpp_test_driven_development_suite, cpp_test_driven_development_test_signed_math);
+    FOSSIL_TEST_ADD(cpp_test_driven_development_suite, cpp_test_driven_development_test_soap_rot_brain);
+    FOSSIL_TEST_ADD(cpp_test_driven_development_suite, cpp_test_driven_development_test_soap_tone_detection);
+    FOSSIL_TEST_ADD(cpp_test_driven_development_suite, cpp_test_driven_development_test_cstr_equality);
+    FOSSIL_TEST_ADD(cpp_test_driven_development_suite, cpp_test_driven_development_test_cstr_length);
+    FOSSIL_TEST_ADD(cpp_test_driven_development_suite, cpp_test_driven_development_test_cstr_prefix_suffix);
+    FOSSIL_TEST_ADD(cpp_test_driven_development_suite, cpp_test_driven_development_test_cstr_contains);
+    FOSSIL_TEST_ADD(cpp_test_driven_development_suite, cpp_test_driven_development_test_cstr_count);
+    FOSSIL_TEST_ADD(cpp_test_driven_development_suite, cpp_test_driven_development_test_pointer_nullability);
+    FOSSIL_TEST_ADD(cpp_test_driven_development_suite, cpp_test_driven_development_test_likely_unlikely_conditions);
+    FOSSIL_TEST_ADD(cpp_test_driven_development_suite, cpp_test_driven_development_test_pointer_equality);
+    FOSSIL_TEST_ADD(cpp_test_driven_development_suite, cpp_test_driven_development_test_size_comparisons);
 
-    FOSSIL_TEST_REGISTER( cpp_test_driven_development_suite);
+    FOSSIL_TEST_REGISTER(cpp_test_driven_development_suite);
 }
