@@ -1,15 +1,20 @@
 # Codelab: Pizza Test Humble Beginnings
 Welcome to the Humble Beginnings series, where we explore the power and flexibility of **Pizza Test**, a comprehensive and easy-to-use testing framework for C and C++. This series highlights the core capabilities of Pizza Test, guiding you through essential test styles and use cases. From writing your very first unit test to mastering advanced concepts, these codelabs will help you unlock the full potential of this library. Whether you're a beginner or an experienced developer, Pizza Test provides the tools you need to create reliable, maintainable, and expressive tests that seamlessly integrate into your development workflow.
 
-For viewing samples, be sure to look in the `code/pages` directory.
-
 | Page No. | Page Title                  | Description                                          |
 | -------- | --------------------------- | ---------------------------------------------------- |
 | 1        | Hello Pizza!                | Introduction and writing your first simple unit test |
-| 2        | Beyond Basics               | Using assertions and assumptions for validation      |
-| 3        | Test-Driven Development     | Writing tests first and driving development          |
-| 4        | Behavior Driven Development | Writing expressive BDD-style tests                   |
-| 5        | Domain Driven Design        | Testing with domain concepts and fixtures            |
+| 2        | Test-Driven Development     | Writing tests first and driving development          |
+| 3        | Behavior Driven Development | Writing expressive BDD-style tests                   |
+| 4        | Domain Driven Design        | Testing with domain concepts and fixtures            |
+| 5        | Beyond Basics               | Using assertions and assumptions for validation      |
+| 6        | Mocking and Stubbing        | Simulating dependencies for isolated testing         |
+| 7        | Parameterized Tests         | Writing tests that run with multiple input sets      |
+| 8        | Performance Testing         | Measuring and validating performance characteristics |
+| 9        | Regression Testing          | Ensuring changes don't break existing functionality  |
+| 10       | Integration Testing         | Testing interactions between multiple components     |
+
+For viewing samples, be sure to look in the `code/pages` directory.
 
 ## Prerequisites
 
