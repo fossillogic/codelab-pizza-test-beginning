@@ -1,8 +1,15 @@
-# Codelab by Fossil Logic
-
-Welcome to the Codelab project template by Fossil Logic! This template is designed to help you kickstart your journey in creating classic executable projects. Whether you're sharing applications via GitHub or exploring sample implementations, this template provides all the necessary setup, compilation, installation, and execution instructions to get you started quickly.
+# Codelab: Pizza Test Humble Beginnings
+Welcome to the Humble Beginnings series, where we explore the power and flexibility of **Pizza Test**, a comprehensive and easy-to-use testing framework for C and C++. This series highlights the core capabilities of Pizza Test, guiding you through essential test styles and use cases. From writing your very first unit test to mastering advanced concepts, these codelabs will help you unlock the full potential of this library. Whether you're a beginner or an experienced developer, Pizza Test provides the tools you need to create reliable, maintainable, and expressive tests that seamlessly integrate into your development workflow.
 
 For viewing samples, be sure to look in the `code/pages` directory.
+
+| Page No. | Page Title                  | Description                                          |
+| -------- | --------------------------- | ---------------------------------------------------- |
+| 1        | Hello Pizza!                | Introduction and writing your first simple unit test |
+| 2        | Beyond Basics               | Using assertions and assumptions for validation      |
+| 3        | Test-Driven Development     | Writing tests first and driving development          |
+| 4        | Behavior Driven Development | Writing expressive BDD-style tests                   |
+| 5        | Domain Driven Design        | Testing with domain concepts and fixtures            |
 
 ## Prerequisites
 
@@ -19,8 +26,8 @@ Before you begin, ensure you have the following installed:
 
 1. **Clone the Repository**:
     ```bash
-    git clone https://github.com/fossillogic/codelab-base.git
-    cd codelab-base
+    git clone https://github.com/fossillogic/codelab-pizza-test-beginning.git
+    cd codelab-pizza-test-beginning
     ```
 
 2. **Configure the Build**:
@@ -33,18 +40,18 @@ Before you begin, ensure you have the following installed:
     meson compile -C builddir
     ```
 
-5. **Run the Project**:
+4. **Run the Project**:
     ```bash
     ./<executable-name>
     ```
 
 ## Contributing
 
-We welcome contributions! Feel free to open pull requests or create issues on the [GitHub repository](https://github.com/fossillogic/codelab-base).
+We welcome contributions! Feel free to open pull requests or create issues on the [GitHub repository](https://github.com/fossillogic/codelab-pizza-test-beginning).
 
 ## Feedback and Support
 
-Have questions, feedback, or encountered an issue? Please open an issue on the [GitHub repository](https://github.com/fossillogic/codelab-base).
+Have questions, feedback, or encountered an issue? Please open an issue on the [GitHub repository](https://github.com/fossillogic/codelab-pizza-test-beginning/issues).
 
 ## License
 
