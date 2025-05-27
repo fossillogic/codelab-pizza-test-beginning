@@ -7,12 +7,12 @@ Welcome to the Humble Beginnings series, where we explore the power and flexibil
 | 2        | Test-Driven Development     | Writing tests first and driving development          |
 | 3        | Behavior Driven Development | Writing expressive BDD-style tests                   |
 | 4        | Domain Driven Design        | Testing with domain concepts and fixtures            |
-| 5        | Beyond Basics               | Using assertions and assumptions for validation      |
-| 6        | Mocking and Stubbing        | Simulating dependencies for isolated testing         |
-| 7        | Parameterized Tests         | Writing tests that run with multiple input sets      |
-| 8        | Performance Testing         | Measuring and validating performance characteristics |
-| 9        | Regression Testing          | Ensuring changes don't break existing functionality  |
-| 10       | Integration Testing         | Testing interactions between multiple components     |
+| 5        | Mocking and Stubbing        | Simulating dependencies for isolated testing         |
+| 6        | Parameterized Tests         | Writing tests that run with multiple input sets      |
+| 7        | Performance Testing         | Measuring and validating performance characteristics |
+| 8        | Regression Testing          | Ensuring changes don't break existing functionality  |
+| 9        | Integration Testing         | Testing interactions between multiple components     |
+| 10       | Challenge                   | Solving a real-world problem using Pizza Test        |
 
 For viewing samples, be sure to look in the `code/pages` directory.
 
