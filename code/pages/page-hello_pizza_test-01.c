@@ -29,12 +29,12 @@ FOSSIL_TEARDOWN(c_hello_pizza_test_suite) {}
 // Simple test case for 2 + 2
 // * * * * * * * * * * * * * * * * * * * * * * * *
 
-FOSSIL_TEST(c_hello_pizza_test_test_simple_math) {
+FOSSIL_TEST(c_hello_pizza_test_simple_math) {
     int result = 2 + 2;
     ASSUME_ITS_EQUAL_I32(4, result);
 }
 
-FOSSIL_TEST(c_hello_pizza_test_test_unsigned_math) {
+FOSSIL_TEST(c_hello_pizza_test_unsigned_math) {
     uint32_t actual = 10;
     uint32_t expected = 5;
 
@@ -45,7 +45,7 @@ FOSSIL_TEST(c_hello_pizza_test_test_unsigned_math) {
     ASSUME_NOT_MORE_OR_EQUAL_U32(expected, actual);
 }
 
-FOSSIL_TEST(c_hello_pizza_test_test_signed_math) {
+FOSSIL_TEST(c_hello_pizza_test_signed_math) {
     int32_t actual = -10;
     int32_t expected = -5;
 
@@ -56,7 +56,7 @@ FOSSIL_TEST(c_hello_pizza_test_test_signed_math) {
     ASSUME_NOT_MORE_OR_EQUAL_I32(actual, expected);
 }
 
-FOSSIL_TEST(c_hello_pizza_test_test_soap_rot_brain) {
+FOSSIL_TEST(c_hello_pizza_test_soap_rot_brain) {
     const char *text = "This is a clean and clear sentence.";
     ASSUME_NOT_SOAP_ROT_BRAIN(text);
 
@@ -64,7 +64,7 @@ FOSSIL_TEST(c_hello_pizza_test_test_soap_rot_brain) {
     ASSUME_ITS_SOAP_ROT_BRAIN(rot_brain_text);
 }
 
-FOSSIL_TEST(c_hello_pizza_test_test_soap_tone_detection) {
+FOSSIL_TEST(c_hello_pizza_test_soap_tone_detection) {
     const char *formal_text = "Dear Sir or Madam, I hope this message finds you well.";
     ASSUME_ITS_SOAP_TONE_DETECTED(formal_text, "formal");
 
@@ -78,7 +78,7 @@ FOSSIL_TEST(c_hello_pizza_test_test_soap_tone_detection) {
     ASSUME_NOT_SOAP_TONE_DETECTED(incorrect_tone_text, "sarcastic");
 }
 
-FOSSIL_TEST(c_hello_pizza_test_test_cstr_equality) {
+FOSSIL_TEST(c_hello_pizza_test_cstr_equality) {
     const char *actual = "hello";
     const char *expected = "hello";
     ASSUME_ITS_EQUAL_CSTR(actual, expected);
@@ -87,13 +87,13 @@ FOSSIL_TEST(c_hello_pizza_test_test_cstr_equality) {
     ASSUME_NOT_EQUAL_CSTR(actual, not_expected);
 }
 
-FOSSIL_TEST(c_hello_pizza_test_test_cstr_length) {
+FOSSIL_TEST(c_hello_pizza_test_cstr_length) {
     const char *text = "hello";
     ASSUME_ITS_LENGTH_EQUAL_CSTR(text, 5);
     ASSUME_NOT_LENGTH_EQUAL_CSTR(text, 10);
 }
 
-FOSSIL_TEST(c_hello_pizza_test_test_cstr_prefix_suffix) {
+FOSSIL_TEST(c_hello_pizza_test_cstr_prefix_suffix) {
     const char *text = "hello world";
     ASSUME_ITS_CSTR_STARTS_WITH(text, "hello");
     ASSUME_NOT_CSTR_STARTS_WITH(text, "world");
@@ -102,19 +102,19 @@ FOSSIL_TEST(c_hello_pizza_test_test_cstr_prefix_suffix) {
     ASSUME_NOT_CSTR_ENDS_WITH(text, "hello");
 }
 
-FOSSIL_TEST(c_hello_pizza_test_test_cstr_contains) {
+FOSSIL_TEST(c_hello_pizza_test_cstr_contains) {
     const char *text = "hello world";
     ASSUME_ITS_CSTR_CONTAINS(text, "world");
     ASSUME_NOT_CSTR_CONTAINS(text, "pizza");
 }
 
-FOSSIL_TEST(c_hello_pizza_test_test_cstr_count) {
+FOSSIL_TEST(c_hello_pizza_test_cstr_count) {
     const char *text = "hello hello world";
     ASSUME_ITS_CSTR_COUNT(text, "hello", 2);
     ASSUME_NOT_CSTR_COUNT(text, "hello", 3);
 }
 
-FOSSIL_TEST(c_hello_pizza_test_test_pointer_nullability) {
+FOSSIL_TEST(c_hello_pizza_test_pointer_nullability) {
     void *null_ptr = null;
     void *non_null_ptr = (void *)0x1;
 
@@ -128,7 +128,7 @@ FOSSIL_TEST(c_hello_pizza_test_test_pointer_nullability) {
     ASSUME_NOT_CNONNULL(null_ptr);
 }
 
-FOSSIL_TEST(c_hello_pizza_test_test_likely_unlikely_conditions) {
+FOSSIL_TEST(c_hello_pizza_test_likely_unlikely_conditions) {
     int likely_condition = 1;
     int unlikely_condition = 0;
 
@@ -139,7 +139,7 @@ FOSSIL_TEST(c_hello_pizza_test_test_likely_unlikely_conditions) {
     ASSUME_NOT_UNLIKELY(unlikely_condition);
 }
 
-FOSSIL_TEST(c_hello_pizza_test_test_pointer_equality) {
+FOSSIL_TEST(c_hello_pizza_test_pointer_equality) {
     void *ptr1 = (void *)0x1;
     void *ptr2 = (void *)0x1;
     void *ptr3 = (void *)0x2;
@@ -148,7 +148,7 @@ FOSSIL_TEST(c_hello_pizza_test_test_pointer_equality) {
     ASSUME_NOT_EQUAL_PTR(ptr1, ptr3);
 }
 
-FOSSIL_TEST(c_hello_pizza_test_test_size_comparisons) {
+FOSSIL_TEST(c_hello_pizza_test_size_comparisons) {
     size_t size1 = 10;
     size_t size2 = 20;
 
@@ -163,21 +163,21 @@ FOSSIL_TEST(c_hello_pizza_test_test_size_comparisons) {
 // * Codelab Test Pool
 // * * * * * * * * * * * * * * * * * * * * * * * *
 
-FOSSIL_TEST_GROUP(c_hello_pizza_test_tests) {
-    FOSSIL_TEST_ADD(c_hello_pizza_test_suite, c_hello_pizza_test_test_simple_math);
-    FOSSIL_TEST_ADD(c_hello_pizza_test_suite, c_hello_pizza_test_test_unsigned_math);
-    FOSSIL_TEST_ADD(c_hello_pizza_test_suite, c_hello_pizza_test_test_signed_math);
-    FOSSIL_TEST_ADD(c_hello_pizza_test_suite, c_hello_pizza_test_test_soap_rot_brain);
-    FOSSIL_TEST_ADD(c_hello_pizza_test_suite, c_hello_pizza_test_test_soap_tone_detection);
-    FOSSIL_TEST_ADD(c_hello_pizza_test_suite, c_hello_pizza_test_test_cstr_equality);
-    FOSSIL_TEST_ADD(c_hello_pizza_test_suite, c_hello_pizza_test_test_cstr_length);
-    FOSSIL_TEST_ADD(c_hello_pizza_test_suite, c_hello_pizza_test_test_cstr_prefix_suffix);
-    FOSSIL_TEST_ADD(c_hello_pizza_test_suite, c_hello_pizza_test_test_cstr_contains);
-    FOSSIL_TEST_ADD(c_hello_pizza_test_suite, c_hello_pizza_test_test_cstr_count);
-    FOSSIL_TEST_ADD(c_hello_pizza_test_suite, c_hello_pizza_test_test_pointer_nullability);
-    FOSSIL_TEST_ADD(c_hello_pizza_test_suite, c_hello_pizza_test_test_likely_unlikely_conditions);
-    FOSSIL_TEST_ADD(c_hello_pizza_test_suite, c_hello_pizza_test_test_pointer_equality);
-    FOSSIL_TEST_ADD(c_hello_pizza_test_suite, c_hello_pizza_test_test_size_comparisons);
+FOSSIL_TEST_GROUP(c_hello_pizza_tests) {
+    FOSSIL_TEST_ADD(c_hello_pizza_test_suite, c_hello_pizza_test_simple_math);
+    FOSSIL_TEST_ADD(c_hello_pizza_test_suite, c_hello_pizza_test_unsigned_math);
+    FOSSIL_TEST_ADD(c_hello_pizza_test_suite, c_hello_pizza_test_signed_math);
+    FOSSIL_TEST_ADD(c_hello_pizza_test_suite, c_hello_pizza_test_soap_rot_brain);
+    FOSSIL_TEST_ADD(c_hello_pizza_test_suite, c_hello_pizza_test_soap_tone_detection);
+    FOSSIL_TEST_ADD(c_hello_pizza_test_suite, c_hello_pizza_test_cstr_equality);
+    FOSSIL_TEST_ADD(c_hello_pizza_test_suite, c_hello_pizza_test_cstr_length);
+    FOSSIL_TEST_ADD(c_hello_pizza_test_suite, c_hello_pizza_test_cstr_prefix_suffix);
+    FOSSIL_TEST_ADD(c_hello_pizza_test_suite, c_hello_pizza_test_cstr_contains);
+    FOSSIL_TEST_ADD(c_hello_pizza_test_suite, c_hello_pizza_test_cstr_count);
+    FOSSIL_TEST_ADD(c_hello_pizza_test_suite, c_hello_pizza_test_pointer_nullability);
+    FOSSIL_TEST_ADD(c_hello_pizza_test_suite, c_hello_pizza_test_likely_unlikely_conditions);
+    FOSSIL_TEST_ADD(c_hello_pizza_test_suite, c_hello_pizza_test_pointer_equality);
+    FOSSIL_TEST_ADD(c_hello_pizza_test_suite, c_hello_pizza_test_size_comparisons);
 
     FOSSIL_TEST_REGISTER(c_hello_pizza_test_suite);
 }
