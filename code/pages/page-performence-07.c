@@ -30,15 +30,16 @@ FOSSIL_TEARDOWN(c_performence_suite) {}
 // * * * * * * * * * * * * * * * * * * * * * * * *
 
 FOSSIL_TEST(c_performence_test_simple_math) {
-    MARK_BENCHMARK("Simple Math Benchmark");
+    // Ensure proper macro or function definitions for benchmarking
+    MARK_BENCHMARK(simple_math_benchmark);
 
-    MARK_START("Simple Math Benchmark");
+    MARK_START(simple_math_benchmark);
     int result = 2 + 2;
-    MARK_STOP("Simple Math Benchmark");
+    MARK_STOP(simple_math_benchmark);
 
     ASSUME_ITS_EQUAL_I32(4, result);
 
-    MARK_REPORT("Simple Math Benchmark");
+    MARK_REPORT(simple_math_benchmark);
 }
 
 // * * * * * * * * * * * * * * * * * * * * * * * *
